@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            @font-face {
+                font-family: 'PKMN RBYGSC';
+                src: url('assets/font.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: block;
+            }
+            #preview {
+                position: relative;
+                width: min-content;
+            }
+            img {
+                image-rendering: pixelated;
+                width: 480px;
+                height: 432px;
+            }
+            #text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: 'PKMN RBYGSC';
+                font-size: 24px;
+                white-space: pre;
+                transform: translate(24px, 320px);
+                line-height: 48px;
+            }
+            
+        </style>
+        <script src="scripts/elm.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            const app = Elm.Main.init({
+                node: document.getElementById('app'),
+            });
+        </script>
+    </body>
+</html>
